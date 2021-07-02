@@ -30,38 +30,41 @@ const Header = () => {
         } 
     }
     return (
-        <div className="header">
-            <Row type="flex" justify="center">
-                <Col xs={24} sm={24} md={10} lg={15} xl={12}>
-                    <span className="header-logo">Zemei</span>
-                    <span className="header-txt">have a good life</span>
-                </Col>
 
-                <Col className="menu-div" xs={0} sm={0} md={14} lg={8} xl={6}>
-                    <Menu mode="horizontal" onClick={handleClick}>
-                        <Menu.Item key="0">
-                        <HomeOutlined />
-                            Home
-                        </Menu.Item>
-                        {
-                            navArray.map((item)=>{
-                                return (
-                                    <Menu.Item key={item.id}>
-                                    <YoutubeOutlined />
-                                        {item.typeName}
-                                    </Menu.Item>
-                                )
-                            })
-                        }
-                        
-                        <Menu.Item key="life">
-                        <CameraOutlined />
-                            Life
-                        </Menu.Item>
-                    </Menu>
-                </Col>
-            </Row>
-        </div>
+        <div className="header">
+                <div className="header-center">
+                    <Row type="flex" justify="center">
+                        <Col  xs={24} sm={24} md={13} >
+                            <span className="header-logo">
+                                <Link href={{pathname:'/'}}>
+                                    <a> Zemei</a>
+                                </Link>
+                                </span>
+                            <span className="header-txt">have a good life</span>
+                        </Col>
+                    
+                        <Col className="menu-div" xs={0} sm={0} md={11} >
+                           <Row type='flex'>
+                               <Col xs={0} sm={0} md={6}  >
+                                    <Link  href={{pathname:'/'}}>
+                                        <a> <HomeOutlined /> Home</a>   
+                                    </Link>
+                               </Col>
+                               <Col xs={0} sm={0} md={6}  >
+                                    <Link  href={{pathname:'/list',query:{id:1}}}>
+                                        <a><YoutubeOutlined /> Video</a>   
+                                    </Link>
+                               </Col>
+                               <Col xs={0} sm={0} md={6}  >
+                                    <Link  href={{pathname:'/list'}}>
+                                        <a><CameraOutlined /> Life</a>   
+                                    </Link>
+                               </Col>
+                           </Row>
+                        </Col>
+                    </Row>
+                </div>
+            </div>
     )
 }
 

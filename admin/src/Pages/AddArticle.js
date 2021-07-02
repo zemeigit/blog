@@ -24,6 +24,11 @@ function AddArticle(props){
 
    useEffect(()=>{
        getTypeInfo()
+       let tmpId = props.match.params.id
+        if(tmpId){
+            setArticleId(tmpId)
+            getArticleById(tmpId)
+        } 
    },[])
 
    marked.setOptions({
@@ -132,6 +137,26 @@ function AddArticle(props){
         }
 
     }
+    const getArticleById = (id)=>{
+        axios(servicePath.getArticleById+id,{ 
+            withCredentials: true,
+            header:{ 'Access-Control-Allow-Origin':'*' }
+        }).then(
+            res=>{
+                console.log(res)
+                setArticleTitle(res.data.data[0].title)
+                setArticleContent(res.data.data[0].article_content)
+                let html=marked(res.data.data[0].article_content)
+                setMarkdownContent(html)
+                setIntroducemd(res.data.data[0].introduce)
+                let tmpInt = marked(res.data.data[0].introduce)
+                setIntroducehtml(tmpInt)
+                setShowDate(res.data.data[0].time)
+                setSelectType(res.data.data[0].typeId)
+    
+            }
+        )
+    }
     return (
       <div>
           <Row gutter={5}>
@@ -142,7 +167,7 @@ function AddArticle(props){
                             placeholder="Blog title"
                             size="large"
                             onChange={e=>{setArticleTitle(e.target.value)}}
-                            size="large" 
+                            value={articleTitle}
                         />
                     </Col>
                     <Col span={4}>
@@ -162,6 +187,7 @@ function AddArticle(props){
                             className="markdown-content"
                             rows={35}
                             placeholder="Article Content"
+                            value={articleContent}
                             onChange={changeContent}
                             />
                     </Col>
@@ -182,6 +208,7 @@ function AddArticle(props){
                         <TextArea 
                             rows={4} 
                             placeholder="Intro"
+                            value={introducemd}
                             onChange={changeIntroduce}
                         />
                         <br/><br/>

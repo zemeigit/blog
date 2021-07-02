@@ -2,7 +2,7 @@ import React ,{useState} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import axios from 'axios'
-import {Row, Col, List} from 'antd'
+import {Row, Col, List,Affix} from 'antd'
 import { CalendarOutlined ,VideoCameraOutlined, FireOutlined} from '@ant-design/icons';
 import Header from '../components/Header'
 import Author from '../components/Author'
@@ -29,13 +29,17 @@ const Home = (list) => {
   })
 
   return (
+    <>
     <div>
     <Head>
           <title>Home</title>
         </Head>
-        <Header />
+        <Affix offsetTop={0}>
+        <Header/>
+      </Affix>
         <Row className="comm-main" type="flex" justify="center">
-          <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={14}  >
+          <Col xs={24} sm={24} md={16} lg={18} xl={14}  >
+            <div className="comm-left">
             <List 
               header={<div>My list</div>}
               itemLayout="vertical"
@@ -57,14 +61,17 @@ const Home = (list) => {
                 </List.Item>
               )}
               />
+               </div>
           </Col>
-
+         
           <Col className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
             <Author />
           </Col>
         </Row>
-        <Footer />
+        
     </div>
+    <Footer />
+    </>
   )
 }
 

@@ -26,9 +26,9 @@ function ArticleList(props){
     const deleteArticle = (id)=>{
         confirm({
             title:'confirm to delete',
-            content:'if click ok, article will be delete'
-            onOk(){ test
-                axios(servicePath.deleteArticle,{withCredentials:true}).then(
+            content:'if click ok, article will be delete',
+            onOk(){ 
+                axios(servicePath.deleteArticle+id,{withCredentials:true}).then(
                     res=>{
                         message.success('delete success')
                         getList()
@@ -40,6 +40,12 @@ function ArticleList(props){
             }
         })
     }
+    const updateArticle = (id,checked)=>{
+
+        props.history.push('/index/add/'+id)
+    
+    }
+
     return (
         <div>
             <List
@@ -80,7 +86,7 @@ function ArticleList(props){
                                 {item.view_count}
                             </Col>
                             <Col span={4}>
-                                <Button type="primary">Modify</Button>
+                                <Button type="primary" onClick={()=>{updateArticle(item.id)}}>Modify</Button>&nbsp;
                                 <Button onClick={()=>{deleteArticle(item.id)}}>Delete</Button>
                             </Col>
 

@@ -7,5 +7,6 @@ module.exports = app =>{
     router.post('/admin/addArticle' , controller.admin.main.addArticle)
     router.post('/admin/updateArticle' , controller.admin.main.updateArticle)
     router.get('/admin/getArticleList' , controller.admin.main.getArticleList)
-    router.get('/admin/deleteArticle' , controller.admin.main.deleteArticle)
+    router.get('/admin/deleteArticle/:id' , controller.admin.main.deleteArticle)
+    router.get('/admin/getArticleById/:id',controller.admin.main.getArticleById)
 }

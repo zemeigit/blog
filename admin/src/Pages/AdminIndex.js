@@ -23,9 +23,9 @@ function AdminIndex(props){
   };
   const hanldeClickArticle = e=>{
       if(e.key==='AddArticle'){
-          props.history.push('./index/add')
+          props.history.push('/index/add')
       }else{
-          props.history.push('./index/list')
+          props.history.push('/index/list')
       }
   }
 
@@ -64,7 +64,8 @@ function AdminIndex(props){
                 <div>
                     <Route path="/index/" exact component={AddArticle} />
                     <Route path="/index/add/" exact component={AddArticle} />
-                    <Route path="/index/list/" component={ArticleList} />
+                    <Route path="/index/list/" exact component={ArticleList} />
+                    <Route path="/index/add/:id" exact component={AddArticle} />
                 </div>
             </div>
             </div>
