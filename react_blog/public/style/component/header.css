@@ -1,6 +1,11 @@
+
+li{
+    display: inline;
+}
 .header{
     background-color: #fff;
     padding: .4rem;
+    overflow: hidden;
     height: 4rem;
     border-bottom:1px solid #eee;
 }
@@ -12,19 +17,31 @@
     color:#1e90ff;
     font-size: 1.4rem;
     text-align: left;
+    transition: all .5s;
+}
+.header-logo:hover{
+    color:#1e90ff;
+    font-size: 1.5rem;
+    text-align: left;
 }
 .header-txt{
     font-size: 0.6rem;
     color: #999;
     display: inline-block;
-    padding-left: 0.3rem;
+    padding-left: 0.5rem;
 }
-.memu-div{
-    padding-top: 10px;
-    display: inline;
+.menu-div{
+    display: inline-block;
     text-align: right;
+    float: right;
 }
-.memu-div a{
+.menu-div a{
     color:#999 !important; 
+    transition: all .5s;
     font-size: .9rem;
+    padding: 0.3rem
+}
+.menu-div a:hover{
+    color:black !important; 
+    font-size: 1rem;
 }

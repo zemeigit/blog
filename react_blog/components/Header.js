@@ -44,23 +44,9 @@ const Header = () => {
                         </Col>
                     
                         <Col className="menu-div" xs={0} sm={0} md={11} >
-                           <Row type='flex'>
-                               <Col xs={0} sm={0} md={6}  >
-                                    <Link  href={{pathname:'/'}}>
-                                        <a> <HomeOutlined /> Home</a>   
-                                    </Link>
-                               </Col>
-                               <Col xs={0} sm={0} md={6}  >
-                                    <Link  href={{pathname:'/list',query:{id:1}}}>
-                                        <a><YoutubeOutlined /> Video</a>   
-                                    </Link>
-                               </Col>
-                               <Col xs={0} sm={0} md={6}  >
-                                    <Link  href={{pathname:'/list'}}>
-                                        <a><CameraOutlined /> Life</a>   
-                                    </Link>
-                               </Col>
-                           </Row>
+                            <li><Link href={{pathname:'/'}}><a> <HomeOutlined /> Home</a></Link> </li>
+                            <li><Link href={{pathname:'/list',query:{id:1}}}><a> <YoutubeOutlined /> Video</a></Link>  </li>
+                            <li><Link href={{pathname:'/list'}}><a> <CameraOutlined /> Life</a></Link> </li>
                         </Col>
                     </Row>
                 </div>
