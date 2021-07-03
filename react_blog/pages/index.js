@@ -38,7 +38,6 @@ const Home = (list) => {
         <Header/>
       </Affix>
         <Row className="comm-main" type="flex" justify="center">
-          <Col xs={24} sm={24} md={16} lg={18} xl={14}  >
             <div className="comm-left">
             <List 
               header={<div>My list</div>}
@@ -62,15 +61,15 @@ const Home = (list) => {
               )}
               />
                </div>
-          </Col>
-         
-          <Col className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
+
+         <div className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
             <Author />
-          </Col>
+          </div>
         </Row>
-        
+        <Footer />
+       
     </div>
-    <Footer />
+    
     </>
   )
 }

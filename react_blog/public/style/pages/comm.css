@@ -4,7 +4,8 @@ body{
 
 .comm-left{
   background-color: #FFF;
-  width: 60%;
+  width: 70%;
+  float:left;
   padding:.3rem;
   border-radius: .3rem;
   border:1px solid #eee;
@@ -12,10 +13,11 @@ body{
 }
 .comm-right{
   background-color: #FFF;
-  width: 30%;
-  margin-left: 50rem;
-  padding:.3rem;
+  width: 25%;
+  float:left;
+  padding: .3rem;
   border-radius: .3rem;
+  margin-left: 3.1rem;
   border:1px solid #eee;
 
 }
