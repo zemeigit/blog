@@ -26,7 +26,9 @@ const MyList = (list) => {
           <Col className="comm-left" xs={24} sm={24} md={16} lg={18} xl={14}  >
           <div className="bread-div">
               <Breadcrumb>
-              <Breadcrumb.Item><a href="/"> Home </a></Breadcrumb.Item>
+              <Breadcrumb.Item>
+                <Link href="/"><a> Home </a></Link>
+              </Breadcrumb.Item>
               <Breadcrumb.Item>Blog</Breadcrumb.Item>
               </Breadcrumb>
             </div>

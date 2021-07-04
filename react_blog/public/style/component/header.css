@@ -6,8 +6,8 @@ li{
     background-color: #fff;
     padding: .4rem;
     overflow: hidden;
-    height: 4rem;
-    border-bottom:1px solid #eee;
+    height: 3rem;
+    border-bottom: 1px solid #eee;
 }
 .header-center{
     max-width: 1100px;
@@ -34,6 +34,7 @@ li{
     display: inline-block;
     text-align: right;
     float: right;
+    padding-top: .4rem;
 }
 .menu-div a{
     color:#999 !important; 

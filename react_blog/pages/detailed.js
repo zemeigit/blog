@@ -12,6 +12,7 @@ import Tocify from '../components/tocify.tsx'
 import MarkNav from 'markdown-navbar'
 import ReactMarkdown from 'react-markdown'
 import servicePage from '../config/apiUrl'
+import Link from 'next/link'
 
 const Detailed = (props) => {
   const tocify = new Tocify()
@@ -82,14 +83,18 @@ const Detailed = (props) => {
         <div>
             <div className="bread-div">
                 <Breadcrumb>
-                    <Breadcrumb.Item><a href="/">Home</a></Breadcrumb.Item>
-                    <Breadcrumb.Item><a href="/">Blog</a></Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                      <Link href="/"><a>Home</a></Link>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                      <Link href="/"><a>Blog</a></Link>
+                    </Breadcrumb.Item>
                     <Breadcrumb.Item>Article</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
             <div>
                 <div className="detailed-title">
-                    Zemei's Good Life
+                    Zemei&aposs Good Life
                 </div>
                 <div className="list-icon center">
                     <span><CalendarOutlined />2021-06-01</span>
@@ -99,7 +104,7 @@ const Detailed = (props) => {
                 <div className="detailed-content" >
           
                   <ReactMarkdown 
-                  children={markdown} 
+                  // children={markdown} 
                   escapeHtml={false}  
                 />
                 </div>

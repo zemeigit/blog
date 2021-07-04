@@ -41,13 +41,18 @@ const Header = () => {
                                 </Link>
                                 </span>
                             <span className="header-txt">have a good life</span>
+                            <span className="menu-div">
+                                <li><Link href={{pathname:'/'}}><a> <HomeOutlined /> Home</a></Link> </li>
+                                <li><Link href={{pathname:'/list',query:{id:1}}}><a> <YoutubeOutlined /> Video</a></Link>  </li>
+                                <li><Link href={{pathname:'/list'}}><a> <CameraOutlined /> Life</a></Link> </li>
+                            </span>
                         </Col>
                     
-                        <Col className="menu-div" xs={0} sm={0} md={11} >
+                        {/* <Col className="menu-div" xs={0} sm={0} md={11} >
                             <li><Link href={{pathname:'/'}}><a> <HomeOutlined /> Home</a></Link> </li>
                             <li><Link href={{pathname:'/list',query:{id:1}}}><a> <YoutubeOutlined /> Video</a></Link>  </li>
                             <li><Link href={{pathname:'/list'}}><a> <CameraOutlined /> Life</a></Link> </li>
-                        </Col>
+                        </Col> */}
                     </Row>
                 </div>
             </div>
