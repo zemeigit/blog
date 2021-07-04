@@ -1,7 +1,7 @@
 const Footer =  () =>(
     <div className="footer-div">
-        <div>Created by React + Node + Ant Design</div>
-        <div>zemei.com</div>
+        <p>Created by React + Node + Ant Design</p>
+        <p>zemei.com</p>
     </div>
 )
 export default Footer

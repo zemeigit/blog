@@ -1,18 +1,18 @@
-
-import {Avatar,Divider} from 'antd'
 import { GithubOutlined } from '@ant-design/icons';
 
 const Author =()=>{
 
     return (
         <div className="author-div comm-box">
-            <div> <Avatar size="small" src="http://localhost:3000/image/zemei.jpg" /></div>
+            <a href="/about">
+            <img className="author" src="http://localhost:3000/image/zemei.jpg" />
+            </a>
             <div className="author-introduction">
-                This is me
-                <Divider>social</Divider>
-                <GithubOutlined />Github
-
+                Zemei
             </div>
+            <br></br>
+            <a className="git" href="https://github.com/zemeigit"><GithubOutlined /></a>
+
         </div>
     )
 
