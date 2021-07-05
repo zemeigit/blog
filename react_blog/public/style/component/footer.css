@@ -1,9 +1,16 @@
 .footer-div{
     text-align: center;
     width: 100%;
-    padding: 1rem;
-    color:#888;
-    height: 100px;
-    position: absolute;
+    padding: 0rem;
+    color:#000000;
+    height: 55px;
+    position: fixed;
     bottom: 0%;
+    background-color: #8BB9E7;
+    border-radius: 10px;
+}
+
+.footer-p{
+    margin-block-start: 0.2em;
+    margin-block-end: 0em;
 }
