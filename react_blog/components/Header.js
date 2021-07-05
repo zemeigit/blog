@@ -47,7 +47,6 @@ const Header = () => {
                                 <li><Link href={{pathname:'/list'}}><a> <CameraOutlined /> Life</a></Link> </li>
                             </span>
                         </Col>
-                
                     </Row>
                 </div>
             </div>
