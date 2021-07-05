@@ -1,19 +1,25 @@
 .author-div{
     text-align: center;
     padding: 1rem;
-
+    height: 13rem;
+    overflow: hidden;
 }
-.author-div div{
-    border: 2px solid red;
+img.author{
     margin-bottom: 1rem;
     border-radius: 50%;
+    transition: all .5s;
+}
+img.author:hover{
+    transform: scale(1.1);
 }
 .author-introduction{
     font-size:.8rem;
     color: #999;
 }
-.account{
-    background-color: #999;
-    margin-left: .5rem;
-    margin-right: .5rem;
+.git{
+    color: #999 !important;
+    transition: all .5s;
+}
+.git:hover{
+    color:black !important; 
 }

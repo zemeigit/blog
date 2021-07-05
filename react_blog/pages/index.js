@@ -2,7 +2,7 @@ import React ,{useState} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import axios from 'axios'
-import {Row, Col, List,Affix} from 'antd'
+import {List,Affix} from 'antd'
 import { CalendarOutlined ,VideoCameraOutlined, FireOutlined} from '@ant-design/icons';
 import Header from '../components/Header'
 import Author from '../components/Author'
@@ -37,7 +37,7 @@ const Home = (list) => {
         <Affix offsetTop={0}>
         <Header/>
       </Affix>
-        <Row className="comm-main" type="flex" justify="center">
+        <div className="comm-main" type="flex" justify="center">
             <div className="comm-left">
             <List 
               header={<div>My list</div>}
@@ -65,11 +65,9 @@ const Home = (list) => {
          <div className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
             <Author />
           </div>
-        </Row>
-        <Footer />
-       
+          </div>  
     </div>
-    
+    <Footer />
     </>
   )
 }
