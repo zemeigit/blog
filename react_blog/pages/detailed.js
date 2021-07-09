@@ -48,8 +48,12 @@ const Detailed = (props) => {
         <div>
             <div className="bread-div">
                 <Breadcrumb>
-                    <Breadcrumb.Item><a href="/">Home</a></Breadcrumb.Item>
-                    <Breadcrumb.Item><a href="/">Blog</a></Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                      <Link href="/"><a>Home</a></Link>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                      <Link href="/"><a>Blog</a></Link>
+                    </Breadcrumb.Item>
                     <Breadcrumb.Item>Article</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
@@ -63,8 +67,6 @@ const Detailed = (props) => {
                     <span><FireOutlined />{props.view_count}</span>
                 </div>
                 <div className="detailed-content" dangerouslySetInnerHTML = {{__html:html}}>
-          
-                  
                 </div>
             </div>
         </div>

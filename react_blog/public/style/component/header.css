@@ -35,6 +35,7 @@ li{
     text-align: right;
     padding: .7rem;
     float: right;
+    padding-top: .4rem;
 }
 .menu-div a{
     color:#999 !important; 
