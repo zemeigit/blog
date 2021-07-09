@@ -6,7 +6,6 @@ import servicePath from '../config/apiUrl'
 import {Row,Col, Menu} from 'antd'
 import { HomeOutlined ,YoutubeOutlined ,CameraOutlined} from '@ant-design/icons';
 
-
 const Header = () => {
     const [navArray, setNavArray] = useState([])
     useEffect(()=>{
@@ -29,9 +28,11 @@ const Header = () => {
             Router.push('/list?id='+e.key)
         } 
     }
+    
     return (
 
         <div className="header">
+            <script src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
                 <div className="header-center">
                     <Row type="flex" justify="center">
                         <span className="header-logo">

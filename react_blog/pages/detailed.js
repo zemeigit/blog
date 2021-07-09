@@ -3,6 +3,7 @@ import Head from 'next/head'
 import axios from 'axios'
 import marked from 'marked'
 import hljs from 'highlight.js'
+import Link from 'next/link'
 import {Breadcrumb,Affix} from 'antd'
 import { CalendarOutlined ,VideoCameraOutlined, FireOutlined} from '@ant-design/icons';
 import Header from '../components/Header'
