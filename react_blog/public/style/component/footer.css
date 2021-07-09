@@ -1,9 +1,7 @@
-.footer-div{
+div.footer-div{
     text-align: center;
-    width: 100%;
-    padding: 1rem;
+    width: 1000px;
     color:#888;
     height: 100px;
-    position: absolute;
     bottom: 0%;
 }

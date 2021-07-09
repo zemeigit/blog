@@ -34,20 +34,17 @@ const Header = () => {
         <div className="header">
                 <div className="header-center">
                     <Row type="flex" justify="center">
-                        <Col  xs={24} sm={24} md={13} >
-                            <span className="header-logo">
-                                <Link href={{pathname:'/'}}>
-                                    <a> Zemei</a>
-                                </Link>
-                                </span>
-                            <span className="header-txt">have a good life</span>
-                            <span className="menu-div">
-                                <li><Link href={{pathname:'/'}}><a> <HomeOutlined /> Home</a></Link> </li>
-                                <li><Link href={{pathname:'/list',query:{id:1}}}><a> <YoutubeOutlined /> Video</a></Link>  </li>
-                                <li><Link href={{pathname:'/list'}}><a> <CameraOutlined /> Life</a></Link> </li>
+                        <span className="header-logo">
+                            <Link href={{pathname:'/'}}>
+                                Zemei
+                            </Link>
                             </span>
-                        </Col>
-                
+                        <span className="header-txt">have a good life</span>
+                        <span className="menu-div">
+                            <li><Link href={{pathname:'/'}}><a> <HomeOutlined /> Home</a></Link> </li>
+                            <li><Link href={{pathname:'/list',query:{id:1}}}><a> <YoutubeOutlined /> Video</a></Link>  </li>
+                            <li><Link href={{pathname:'/list',query:{id:2}}}><a> <CameraOutlined /> Life</a></Link> </li>
+                        </span>
                     </Row>
                 </div>
             </div>

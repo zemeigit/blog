@@ -65,13 +65,16 @@ code {
     text-align: center;
     color: #888;
     border-bottom: 1px solid rgb(30, 144, 255);
-
+    font-size: 1rem;
 }
 .article-menu{
     font-size:12px;
+    background-color: #fff;
 }
 iframe{
     height: 34rem;
+    border:1px solid #ccc;
+    border-radius: 8px;
 }
 .detailed-content  img{
     width: 100%;
@@ -85,4 +88,8 @@ iframe{
 }
 .ant-anchor-wrapper{
     padding: 5px !important;
+}
+.detailed-nav{
+    background-color: #fff;
+    width: 100%;
 }

@@ -11,7 +11,7 @@ const About = () => {
     <>
     <div>
     <Head>
-          <title>Home</title>
+          <title>Zemei</title>
         </Head>
         <Affix offsetTop={0}>
         <Header/>

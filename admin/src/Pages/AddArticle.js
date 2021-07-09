@@ -93,7 +93,7 @@ function AddArticle(props){
             return false
         }
         let dataProps = {}
-        dataProps.type_id = selectedType
+        dataProps.type_id = parseInt(selectedType)+parseInt(1)
         dataProps.title = articleTitle
         dataProps.article_content =articleContent
         dataProps.introduce =introducemd

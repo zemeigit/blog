@@ -7,13 +7,13 @@ import { CalendarOutlined ,VideoCameraOutlined, FireOutlined} from '@ant-design/
 import Header from '../components/Header'
 import Author from '../components/Author'
 import Footer from '../components/Footer'
-import servicePage from '../config/apiUrl'
+import servicePath from '../config/apiUrl'
 import marked from 'marked'
 import hljs from 'highlight.js'
 
 const Home = (list) => {
 
-  const [myList, setMyList] = useState(list.data)
+  const [myList, setMylist] = useState(list.data)
   const renderer = new marked.Renderer()
   marked.setOptions({
     renderer:renderer,
@@ -29,24 +29,24 @@ const Home = (list) => {
   })
 
   return (
-    <>
+    <div>
     <div>
     <Head>
-          <title>Home</title>
+          <title>Zemei</title>
         </Head>
         <Affix offsetTop={0}>
         <Header/>
       </Affix>
         <div className="comm-main" type="flex" justify="center">
-            <div className="comm-left">
+            <div className="comm-left" xs={24} sm={24} md={16} lg={18} xl={14} >
             <List 
-              header={<div>My list</div>}
+              header={<div className="list-header">Blog List</div>}
               itemLayout="vertical"
               dataSource={myList}
               renderItem={item=>(
                 <List.Item>
                   <div className="list-title">
-                    <Link href={{pathname:'/detailed',query:{id:item}}}>
+                    <Link href={{pathname:'/detailed',query:{id:item.id}}}>
                     <a>{item.title}</a>
                       </Link>
                     </div>
@@ -68,13 +68,13 @@ const Home = (list) => {
           </div>  
     </div>
     <Footer />
-    </>
+    </div>
   )
 }
 
 Home.getInitialProps = async ()=>{
   const promise = new Promise((resolve)=>{
-    axios(servicePage.getArticleList).then(
+    axios(servicePath.getArticleList).then(
       (res)=>{
         resolve(res.data)
       }
