@@ -27,7 +27,7 @@ module.exports = appInfo => {
     // database configuration
     client: {
       // host
-      host: '127.0.0.1',
+      host: 'localhost',
       // port
       port: '3306',
       // username

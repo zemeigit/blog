@@ -33,7 +33,6 @@ const Detailed = (props) => {
       return hljs.highlightAuto(code).value
     }
   })
-  console.log(props)
   let html = marked(props.article_content)
 
   return (
