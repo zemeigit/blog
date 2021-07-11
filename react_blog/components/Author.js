@@ -5,7 +5,7 @@ const Author =()=>{
     return (
         <div className="author-div comm-box">
             <a href="/about">
-            <img className="author" src="http://localhost:3000/image/zemei.jpg" />
+            <img className="author" src={"image/zemei.jpg"} />
             </a>
             <div className="author-introduction">
                 Zemei

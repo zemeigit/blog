@@ -19,7 +19,7 @@ const About = () => {
         <div className="comm-main" type="flex" justify="center">
             <div className="comm-left">
             <p>My Timeline</p>
-            <img className="about-img" src="http://localhost:3000/image/timeline.jpg"></img>
+            <img className="about-img" src="image/timeline.jpg"></img>
                </div>
          <div className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
             <Author />
