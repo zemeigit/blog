@@ -59,7 +59,7 @@ const Detailed = (props) => {
             </div>
             <div>
                 <div className="detailed-title">
-                    Zemei's Good Life
+                    {props.title}
                 </div>
                 <div className="list-icon center">
                     <span><CalendarOutlined />{props.time}</span>
